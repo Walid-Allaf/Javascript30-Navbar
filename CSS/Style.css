@@ -1,0 +1,266 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #f3ede5;
+  --background-btn-color: #133416;
+  --heading-color: #f7b300;
+  --text-color: #777676;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--background-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+p,
+li,
+a {
+  color: var(--text-color);
+}
+
+.btn {
+  background: var(--background-btn-color);
+  color: var(--background-color);
+  font-weight: bold;
+  padding: 18px 30px;
+  border-radius: 4px;
+}
+
+/* ======== start header ======== */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100px;
+  font-weight: 400;
+}
+
+header .container .links {
+  display: flex;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+
+  header .container .explain,
+  header .container .links,
+  header .container .two-links {
+    display: none;
+  }
+}
+
+header .container .explain {
+  /* display: flex; */
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: -50px;
+  background: #fff;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+  display: none;
+}
+
+header .container .links li:first-child:hover+.explain {
+  display: flex;
+}
+
+header .container .explain h4 {
+  color: #000;
+}
+
+.explain li img {
+  margin-right: 10px;
+}
+
+header .container .explain li {
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+header .container .explain li:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  header .container .menu {
+    display: none;
+  }
+}
+
+header .container .links>li {
+  margin-right: 25px;
+}
+
+header .container .two-links a:first-child {
+  margin-right: 25px;
+}
+
+header .container .menu:hover+.explain {
+  display: flex;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.explain .menu-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 15px;
+  color: var(--text-color);
+}
+
+/* ======== end header ======== */
+
+/* ======== start section ======== */
+
+section .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+section .container .content {
+  width: 100%;
+}
+
+section .container .content h1 {
+  font-weight: 700;
+  font-size: 45px;
+}
+
+section .container .content h1 span {
+  color: var(--heading-color);
+}
+
+section .container .btn {
+  display: block;
+  width: fit-content;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+section .container .content .rating {
+  color: var(--text-color);
+}
+
+section .container .content .rating img {
+  margin-left: 15px;
+}
+
+@media (min-width: 768px) {
+  section .container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  section .container .content {
+    width: 60%;
+  }
+
+  section .container .content h1 {
+    font-size: 60px;
+  }
+}
+
+section .container>img {
+  width: 30%;
+  height: auto;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  section .container>img {
+    display: block;
+  }
+}
+
+/* ======== end section ======== */
+
+/* ======== start footer ======== */
+
+footer .container {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+footer .container p {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+footer .container .images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .container .images img {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  footer .container {
+    padding-top: 0;
+    padding-bottom: 75px;
+  }
+
+  footer .container .images {
+    justify-content: center;
+  }
+
+  footer .container .images img {
+    margin-bottom: 0;
+  }
+
+  footer .container .images img:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+/* ======== end footer ======== */
